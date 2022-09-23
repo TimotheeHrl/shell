@@ -74,7 +74,6 @@ checkIfPersonFolderExists(){
         readPersonFile        
    }
    readPersonFile(){
-        echo pwd
         cat ./$person.txt
         cd .. 
    }
