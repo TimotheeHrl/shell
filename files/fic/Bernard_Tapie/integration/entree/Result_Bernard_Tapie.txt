@@ -1,1 +1,0 @@
-integration.input.directory value is salut Bernard_Tapie

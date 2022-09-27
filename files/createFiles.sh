@@ -28,6 +28,7 @@ createUserConfFile(){
         cd ./conf/
         touch filesLocation.properties
         echo "integration.input.directory=salut $person" > filesLocation.properties
+
         cd ..
         }
 
@@ -105,6 +106,11 @@ for person in ${persons[@]}
            cd ./integration/
            mkdir entree
            mkdir OUT
+           cd ./OUT/
+           tar -cvzf DGFIP_backup1_FAP.tgz ./../../../../app/$person/
+           tar -cvzf DGFIP_backup2_FAP.tgz ./../../../../app/$person/
+           touch notATgzFile.txt
+                  cd ..
            mkdir error
            cd ../..
                

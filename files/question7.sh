@@ -26,7 +26,6 @@ if [ ! -n "$REP_IN" ]; then
 cd ./fic/${USER}/integration/error/
 touch error_$USER.txt
 echo "integration.input.directory value is null"  > error_$USER.txt
-
     else 
    cd ./fic/${USER}/integration/entree/
 touch Result_$USER.txt
