@@ -27,7 +27,7 @@ createUserConfFile(){
         mkdir conf
         cd ./conf/
         touch filesLocation.properties
-        echo "filesLocation.properties=$person" > filesLocation.conf
+        echo "integration.input.directory=salut $person" > filesLocation.properties
         cd ..
         }
 
