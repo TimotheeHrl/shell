@@ -7,8 +7,11 @@
 # list a file starting by DGFIP_ and ending by _FAP.tgz
 
 
-declare -a USERS
-USERS=( "Lucie_Leroux" "Bernard_Tapie" "Leroy_Merlin" "Josiane_Lemieux" )
+cd ./app
+ list_Folder=$(ls -l | grep ^d | awk '{print $9}')
+       echo -e $list_Folder
+  USERS=$(echo $list_Folder | tr " " "\n")
+cd ..
 cd ./fic/
 for USER in ${USERS[@]}
   do    

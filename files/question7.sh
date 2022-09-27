@@ -11,16 +11,16 @@
 # integration.error.directory=/fic/{USER}//integration/error
 
 
-declare -a USERS
-USERS=( "Lucie_Leroux" "Bernard_Tapie" "Leroy_Merlin" "Josiane_Lemieux" )
-
+cd ./app
+ list_Folder=$(ls -l | grep ^d | awk '{print $9}')
+       echo -e $list_Folder
+  USERS=$(echo $list_Folder | tr " " "\n")
+cd ..
 for USER in ${USERS[@]}
   do    
     echo "User Name is $USER"
  
 REP_IN=$(cat "./app/${USER}/conf/filesLocation.properties" | grep "integration.input.directory" | cut -d "=" -f2)
-# check if a var is null in bash ?
-
 if [ ! -n "$REP_IN" ]; then
         echo "File $REP_IN does not exist"
 cd ./fic/${USER}/integration/error/

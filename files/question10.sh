@@ -5,8 +5,11 @@
 #  dans le répertoire /fic/${USER}/SAVE en gardant la date de dernière modification.
 #   Sans utiliser la commande ls ou ll.
 
-declare -a USERS
-USERS=( "Lucie_Leroux" "Bernard_Tapie" "Leroy_Merlin" "Josiane_Lemieux" )
+cd ./app
+ list_Folder=$(ls -l | grep ^d | awk '{print $9}')
+       echo -e $list_Folder
+  USERS=$(echo $list_Folder | tr " " "\n")
+cd ..
 cd ./fic/
 for USER in ${USERS[@]}
   do    
