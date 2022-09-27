@@ -112,6 +112,7 @@ for person in ${persons[@]}
            touch notATgzFile.txt
                   cd ..
            mkdir error
+           mkdir SAVE
            cd ../..
                
    }
